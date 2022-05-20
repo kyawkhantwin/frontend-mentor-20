@@ -1,0 +1,32 @@
+.cart{
+  position: absolute;
+  top: 0;
+  right: 10%;
+  width: 30rem;
+  background-color: white ;
+  transform: translate(-30%,-70%);
+  box-shadow: 3px 6px 19px $color-grayish-blue-dark;
+  z-index: 10;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s 0.2s;
+  h5 {
+    font-size: $font-size-big;
+    padding: 2rem 1rem;
+
+  }
+
+  p{
+    height: 10rem;
+    text-align: center;
+    line-height: 5rem;
+    font-size: $font-size-smallest;
+  }
+  &:hover,
+  .click:hover + & {
+    visibility: visible;
+    opacity: 1;
+  }
+
+}
