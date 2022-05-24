@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+body {
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif; }
+
+html {
+  font-size: 62.5%; }
+
+.container {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: [menu-start] 40rem [about-start] 45rem [menu-end] 16rem [about-end photo-start] 1fr [photo-end];
+  grid-template-rows: 60vh 40vh; }
+
+.menu {
+  position: relative;
+  grid-column: menu-start / menu-end;
+  grid-row: 1/2; }
+  .menu-photo {
+    width: 100%;
+    height: 100%; }
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10%;
+  left: 5%; }
+  .nav__logo {
+    margin-right: 3rem;
+    padding-bottom: 1rem; }
+  .nav__links {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .nav__link {
+    list-style: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    padding-bottom: 1rem; }
+    .nav__link:not(:last-child) {
+      margin-right: 5rem; }
+    .nav__link:hover {
+      border-bottom: 2px solid white; }
+
+.shop {
+  grid-column: menu-end / photo-end;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: repeat(2, 8rem) 20rem;
+  grid-template-rows: 5rem 8rem 15rem 5rem 5.9rem; }
+
+.header {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  font-size: 3rem;
+  color: black;
+  font-weight: 700; }
+
+.text {
+  grid-column: 2/4;
+  grid-row: 3/4;
+  font-size: 1.6rem;
+  color: #a1a1a1;
+  font-weight: 500; }
+
+.shop-now {
+  grid-column: 2/4;
+  grid-row: 4/5;
+  color: #454545;
+  font-size: 1.6rem;
+  letter-spacing: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.5s; }
+
+.arrow {
+  grid-row: 5/6;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s; }
+
+.arrow-left {
+  grid-column: 1/2; }
+
+.arrow-right {
+  grid-column: 2/3; }
+
+.shop-now:hover {
+  color: #a1a1a1; }
+
+.arrow:hover {
+  background-color: #a1a1a1; }
+
+.image-1 {
+  grid-column: menu-start / about-start;
+  grid-row: 2/3; }
+
+.image-2 {
+  grid-column: photo-start / photo-end;
+  grid-row: 2/3; }
+
+.image {
+  width: 100%;
+  height: 100%; }
+
+.about {
+  grid-column: about-start / about-end;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-rows: 5rem 8rem 10rem;
+  grid-template-columns: 4rem 15rem 4rem; }

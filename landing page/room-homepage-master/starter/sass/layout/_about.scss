@@ -1,0 +1,8 @@
+.about{
+  grid-column: about-start / about-end;
+  grid-row: 2/3;
+
+  display: grid;
+  grid-template-rows: 5rem 8rem 10rem;
+  grid-template-columns:4rem 15rem 4rem;
+}
